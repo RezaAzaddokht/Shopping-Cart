@@ -1,10 +1,13 @@
 import React from 'react';
 
+//function
+import { shorten } from '../helper/function';
+
 const Product = ({itemData}) => {
     return (
         <div>
             <img src={itemData.image} alt="product" style={{width:"300px"}} />
-            <h3>{itemData.title}</h3>
+            <h3>{shorten(itemData.title)}</h3>
             <p>{itemData.price}</p>
             <div>
                 <a href='#'>Details</a>
