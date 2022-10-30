@@ -1,0 +1,15 @@
+.Cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.Cart > img{
+    width: 100px;
+}

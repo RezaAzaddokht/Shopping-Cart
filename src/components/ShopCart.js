@@ -7,12 +7,15 @@ import Cart from '../components/Cart'
 // Context
 import { CartContext } from '../context/CardContextProvider';
 
+// Css
+import styles from './Shop.module.css';
+
 const ShopCart = () => {
 
     const { state, dispatch } = useContext(CartContext);
 
     return (
-        <div>
+        <div className={styles.Shop}>
             <div>
                 {state.selectedItems.map(item => <Cart key={item.id} data={item} />)}
             </div>

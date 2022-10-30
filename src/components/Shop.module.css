@@ -1,0 +1,39 @@
+.Shop{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Shop > div:nth-child(1){
+    width: 50%;
+}
+
+.Shop > div:last-child{
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 5px;
+}
+
+.Shop button{
+    background-color: royalblue;
+    margin-left: .5rem;
+    color: #fff;
+    border: none;
+    padding: .5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Shop a{
+    text-decoration: none;
+    color: royalblue;
+}
+
+@media screen and (max-width: 768px) {
+    .Shop{
+        flex-direction: column;
+    }
+    .Shop > div:nth-child(1){
+        width: 80%;
+        margin: 0 auto;
+    }
+}
