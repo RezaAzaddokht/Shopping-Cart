@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { createContext, useReducer } from 'react';
 
 
 const initialState = {
@@ -63,7 +63,7 @@ export const CartCaontext = createContext()
 
 const CardContextProvider = ({children}) => {
 
-    const [state , dispatch] = useReducer(cardReducer , initialstate);
+    const [state, dispatch] = useReducer(cartReducer, initialState)
 
     return (
         <CartCaontext.Provider value={{state, dispatch}}>
