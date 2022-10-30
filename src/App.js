@@ -8,12 +8,14 @@ import ProductsContextProvider from './context/ProductsContextProvider';
 import Store from './components/Store';
 import ProductDetails from './components/ProductDetails';
 import CardContextProvider from './context/CardContextProvider';
+import Navbar from './components/Navbar';
 
 
 function App() {
   return (
     <ProductsContextProvider>
       <CardContextProvider>
+        <Navbar />
         <Switch>
           <Route path='/products/:id' component={ProductDetails} />
           <Route path='/products' component={Store} />
