@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
-const ProductDetails = () => {
+//Context
+import { ProductsContext } from '../context/ProductsContextProvider';
+
+const ProductDetails = (props) => {
+
+    const id = props.match.params.id
+    const data = useContext(ProductsContext);
+    const product = data[id - 1];
+    const {image , category , title , description , price} = product;
+
     return (
         <div>
-            
+            <img src={image} alt='product' />
+            <div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <p><span>category : </span>{category}</p>
+                <div>
+                    <span>{price} $</span>
+                    <Link to='/products'>back to store</Link>
+                </div>
+            </div>
         </div>
     );
 }
