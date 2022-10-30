@@ -18,9 +18,9 @@ const ProductsContextProvider = ({children}) => {
     } , [])
 
     return (
-        <ProductsContext value={products}>
+        <ProductsContext.Provider value={products}>
             {children}
-        </ProductsContext>
+        </ProductsContext.Provider>
     );
 }
  
